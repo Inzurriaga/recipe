@@ -9,9 +9,9 @@ export class RecipeContainer extends Component {
         return this.props.recipes.meals.map((meal, index) => {
         let svgClass;
         if(index % 2 === 0){
-          svgClass = "folder-tap-odd"
+          svgClass = "folder-tap-odd";
         }else{
-          svgClass = "folder-tap-even"
+          svgClass = "folder-tap-even";
         }
         return <RecipeCard key={meal.idMeal} info={meal} svgClass={svgClass}/>
       })
@@ -24,7 +24,7 @@ export class RecipeContainer extends Component {
     }
   }
   render(){
-    const recipes = this.checkForRecipes()
+    const recipes = this.checkForRecipes();
     return(
       <section className="recipe-container">
         {

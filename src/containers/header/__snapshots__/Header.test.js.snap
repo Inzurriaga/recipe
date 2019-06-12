@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Header should match snap shot 1`] = `ShallowWrapper {}`;
