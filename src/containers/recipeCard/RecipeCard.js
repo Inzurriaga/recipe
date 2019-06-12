@@ -7,7 +7,7 @@ export default class RecipeCard extends Component {
     for(var i = 1; i < 21; i++){
       if(this.props.info[`strIngredient${i}`]){
         ingredients.push(
-          <div className="ingredient-position">
+          <div key={[`${this.props.info.idMeal}${i}`]} className="ingredient-position">
             <p>{this.props.info[`strIngredient${i}`]}</p>
             <p>{this.props.info[`strMeasure${i}`]}</p>
           </div>
@@ -35,6 +35,7 @@ export default class RecipeCard extends Component {
         </svg>
         <section className="recipe-card-grid">
           <article className="recipe-card-ingredients">
+            <h2 className={"meal-name"}>{this.props.info.strMeal}</h2>
             <div className="labels">
               <h2>Ingredients</h2>
             </div>
