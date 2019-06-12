@@ -8,13 +8,25 @@
   min-height:100px;
   background-color: #d1d666;
   border-radius: 5px;
+  &:nth-child(even) {
+    background-color: #b6e1f5;
+  }
 }
 
-.folder-tap {
+.folder-tap-odd {
   position: absolute;
   top: -80px;
   right: 40px;
   fill: #d1d666;
+  width: 250px;
+  height: 85px;
+}
+
+.folder-tap-even {
+  position: absolute;
+  top: -80px;
+  right: 40px;
+  fill: #b6e1f5;
   width: 250px;
   height: 85px;
 }

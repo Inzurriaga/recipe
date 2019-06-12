@@ -6,8 +6,14 @@ export class RecipeContainer extends Component {
 
   checkForRecipes = () => {
     if(this.props.recipes.meals){
-        return this.props.recipes.meals.map(meal => {
-        return <RecipeCard key={meal.idMeal} info={meal}/>
+        return this.props.recipes.meals.map((meal, index) => {
+        let svgClass;
+        if(index % 2 === 0){
+          svgClass = "folder-tap-odd"
+        }else{
+          svgClass = "folder-tap-even"
+        }
+        return <RecipeCard key={meal.idMeal} info={meal} svgClass={svgClass}/>
       })
     }else{
       return(

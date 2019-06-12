@@ -22,7 +22,7 @@ export default class RecipeCard extends Component {
     return(
       <article className="recipe-card-container">
         <svg
-          className="folder-tap"
+          className={this.props.svgClass}
           xmlns="http://www.w3.org/2000/svg"
           width="150mm"
           height="50mm"
@@ -39,8 +39,8 @@ export default class RecipeCard extends Component {
               <h2>Ingredients</h2>
             </div>
             <div className="ingredient-position-labels">
-              <h3>items</h3>
-              <h3>measurements</h3>
+              <h3>Items</h3>
+              <h3>Measurements</h3>
             </div>
             {
               ingredients
