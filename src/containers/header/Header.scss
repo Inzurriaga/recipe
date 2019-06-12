@@ -7,19 +7,28 @@ header {
   width: 100%;
   height: 125px;
   background-color: #f9bf21;
-  h1 {
-    margin-left: 40px;
-    font-family: 'Bevan', cursive;
-    text-shadow: 2px 5px 5px #000000;
-    color: #ffffff;
-    font-size: 4em;
-    span {
-      padding: 10px 20px;
+  div {
+    width: 100%;
+    h1 {
       margin: 10px;
-      background-color: #513a24;
+      margin-left: 40px;
+      font-family: 'Bevan', cursive;
+      text-shadow: 2px 5px 5px #000000;
+      color: #ffffff;
+      font-size: 4em;
+      span {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #513a24;
+        transform: rotate(-5deg);
+        &:nth-child(even) {
+          transform: rotate(5deg)
+       }
+      }
     }
   }
-  div {
+  form {
     display: flex;
     justify-content: center;
     align-items: center;

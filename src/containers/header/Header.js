@@ -5,18 +5,20 @@ export class Header extends Component {
   render(){
     return(
       <header>
-        <h1>
-          <span>R</span>
-          <span>E</span>
-          <span>C</span>
-          <span>I</span>
-          <span>P</span>
-          <span>E</span>
-        </h1>
         <div>
+          <h1>
+            <span>R</span>
+            <span>E</span>
+            <span>C</span>
+            <span>I</span>
+            <span>P</span>
+            <span>E</span>
+          </h1>
+        </div>
+        <form>
           <input></input>
           <button></button>
-        </div>
+        </form>
       </header>
     )
   }
