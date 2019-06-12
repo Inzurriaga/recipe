@@ -1,0 +1,53 @@
+.recipe-card-container {
+  position: relative;
+  padding: 20px;
+  margin-top: 100px;
+  z-index: 0;
+  width: 80%;
+  min-height:440px;
+  background-color: #d1d666;
+  border-radius: 5px;
+}
+
+.folder-tap {
+  position: absolute;
+  top: -80px;
+  right: 40px;
+  fill: #d1d666;
+  width: 250px;
+  height: 85px;
+}
+
+.recipe-card-grid {
+  padding: 20px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "ingredients image"
+    "directions directions";
+}
+
+.recipe-card-ingredients {
+  grid-area: ingredients;
+}
+
+.recipe-card-image {
+  box-shadow: -2px 2px 10px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: image;
+  background-color: #c7c7c7;
+  width: 360px;
+  height: 360px;
+  img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.recipe-card-directions {
+  grid-area: directions;
+}

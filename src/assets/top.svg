@@ -1,0 +1,12 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="150mm"
+   height="55mm"
+   viewBox="0 0 150 55">
+  <g
+     transform="translate(0,-242)">
+    <path
+       style="fill:#00ff00;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,297 c 0,0 0.31935133,-49.16065 30,-50 29.680649,-0.83935 59.287708,-0.83935 90,0 30.71229,0.83935 30,50 30,50 z"/>
+  </g>
+</svg>
