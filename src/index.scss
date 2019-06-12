@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Bevan&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./containers/app/App.scss";
+@import "./containers/header/Header.scss";
+@import "./containers/recipeCard/RecipeCard.scss";
+@import "./containers/recipeContainer/RecipeContainer.scss";
