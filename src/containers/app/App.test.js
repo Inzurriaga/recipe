@@ -1,9 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { App } from './App';
+import { shallow } from "enzyme";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+const mockSetRecipes = jest.fn();
+
+describe("App", () => {
+
+  describe("App", () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <App setRecipes={mockSetRecipes}/>
+      );
+    })
+
+    it("should match snap shot", () => {
+      expect(wrapper).toMatchSnapshot();
+    })
+  })
+
+  describe("mapDispatchToProps", () => {
+
+  })
+})

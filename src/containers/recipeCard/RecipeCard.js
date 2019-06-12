@@ -1,24 +1,26 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
 export default class RecipeCard extends Component {
 
   mapIngredients = () => {
-    let ingredients = []
+    const { info } = this.props;
+    let ingredients = [];
     for(var i = 1; i < 21; i++){
-      if(this.props.info[`strIngredient${i}`]){
+      if(info[`strIngredient${i}`]){
         ingredients.push(
-          <div key={[`${this.props.info.idMeal}${i}`]} className="ingredient-position">
-            <p>{this.props.info[`strIngredient${i}`]}</p>
-            <p>{this.props.info[`strMeasure${i}`]}</p>
+          <div key={[`${info.idMeal}${i}`]} className="ingredient-position">
+            <p>{info[`strIngredient${i}`]}</p>
+            <p>{info[`strMeasure${i}`]}</p>
           </div>
-        )
+        );
       }
     }
     return ingredients
   }
 
   render(){
-    const ingredients = this.mapIngredients()
+    const { strMeal, strMealThumb, strInstructions } = this.props.info;
+    const ingredients = this.mapIngredients();
     return(
       <article className="recipe-card-container">
         <svg
@@ -35,7 +37,7 @@ export default class RecipeCard extends Component {
         </svg>
         <section className="recipe-card-grid">
           <article className="recipe-card-ingredients">
-            <h2 className={"meal-name"}>{this.props.info.strMeal}</h2>
+            <h2 className={"meal-name"}>{strMeal}</h2>
             <div className="labels">
               <h2>Ingredients</h2>
             </div>
@@ -48,13 +50,13 @@ export default class RecipeCard extends Component {
             }
           </article>
           <article className="recipe-card-image">
-          <img src={this.props.info.strMealThumb} alt="hello"/>
+          <img src={strMealThumb} alt="hello"/>
           </article>
           <article className="recipe-card-directions">
             <div className="labels">
               <h2>Directions</h2>
             </div>
-              <p>{this.props.info.strInstructions}</p>
+              <p>{strInstructions}</p>
           </article>
         </section>
       </article>

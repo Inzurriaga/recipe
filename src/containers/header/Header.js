@@ -1,8 +1,9 @@
-import React, { Component } from "react"
-import { connect } from "react-redux"
-import { setRecipes } from "../../redux/actions"
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { setRecipes } from "../../redux/actions";
 
 export class Header extends Component {
+
   constructor(){
     super();
     this.state = {
@@ -17,11 +18,10 @@ export class Header extends Component {
   }
 
   changeMeal = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const response = await  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.userInput}`);
     const recipes = await response.json();
-    console.log(recipes)
-    this.props.setRecipes(recipes)
+    this.props.setRecipes(recipes);
   }
 
   render(){
